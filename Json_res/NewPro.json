@@ -1,0 +1,3798 @@
+{
+    "inv": 26470,
+    "totalDiscount": 55,
+    "subTotal": 55,
+    "tmpNetPrice": 55,
+    "totalRedeems": 0,
+    "promoInfo": [
+        {
+            "promoNumber": "7401",
+            "description": "P>7401>ส่วนลด โบโลน่าคู่แฟนต้าสไปรท์",
+            "qualifySpend": 11000,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 25,
+            "discountRewards": 25,
+            "rewardAmount": 2500,
+            "originalRewardField": 2500,
+            "rewardType": 8,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 3600,
+                                        "rewardAmount": 819
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 3600,
+                                        "rewardAmount": 819
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1900,
+                                        "rewardAmount": 431.00000000000006
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1900,
+                                        "rewardAmount": 431.00000000000006
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 3600
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 3600
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1900
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1900
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "promoNumber": "9399",
+            "description": "P>9399>ขาใช้สิทธิ์ส่วนลด 30 บ.จากการสมัครAMB",
+            "qualifySpend": 8500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 30,
+            "discountRewards": 30,
+            "rewardAmount": 3000,
+            "originalRewardField": 3000,
+            "rewardType": 14,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 2781,
+                                        "rewardAmount": 982
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 2781,
+                                        "rewardAmount": 982
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1469,
+                                        "rewardAmount": 518
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1469,
+                                        "rewardAmount": 518
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 2781
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 2781
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1469
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1469
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "31020631",
+                    "description": "สิทธิ์ส่วนลด 30 บาท",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 0,
+                    "rdmValue": "1",
+                    "endingBalance": "-1"
+                }
+            ]
+        },
+        {
+            "promoNumber": "4488",
+            "description": "P>4488 >Common Point 10บ.3แต้ม All Member",
+            "qualifySpend": 5500,
+            "quantity": 5,
+            "numberOfTotalSavers": 5,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "808",
+                    "description": "All Member Point",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 15,
+                    "endingBalance": "15"
+                }
+            ]
+        },
+        {
+            "promoNumber": "8965",
+            "description": "P>8965>สิทธิ์แลกซื้อ",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "9100487",
+                    "description": "** reward master not ready **",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1,
+                    "endingBalance": "1"
+                }
+            ]
+        },
+        {
+            "promoNumber": "8966",
+            "description": "P>8966>AMBสิทธิ์แลกซื้อรับเพิ่ม1สิทธิ์",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "9100487",
+                    "description": "** reward master not ready **",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1,
+                    "endingBalance": "1"
+                }
+            ]
+        },
+        {
+            "promoNumber": "9035",
+            "description": "P>9035<ภารกิจนักช้อปมือทอง (7Delivery)",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "31020569",
+                    "description": "ภารกิจนักช้อปมือทอง",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1,
+                    "endingBalance": "1"
+                }
+            ]
+        },
+        {
+            "promoNumber": "9400",
+            "description": "P>9400>สมัครสมาชิกAll Member",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "31020631",
+                    "description": "สิทธิ์ส่วนลด 30 บาท",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1,
+                    "endingBalance": "1"
+                }
+            ]
+        },
+        {
+            "promoNumber": "9537",
+            "description": "P>9537>ภารกิจเปิดรับใบเสร็จ",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "9102965",
+                    "description": "Register E Tax",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 0,
+                    "rdmValue": "1",
+                    "endingBalance": "-1"
+                },
+                {
+                    "id": "31020660",
+                    "description": "ภารกิจเปิดรับใบเสร็จ",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1,
+                    "endingBalance": "1"
+                }
+            ]
+        },
+        {
+            "promoNumber": "10442",
+            "description": "P>10442>สมัครสมาชิกAll Memberแจก1000คะแนน",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "808",
+                    "description": "All Member Point",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1000,
+                    "endingBalance": "1000"
+                }
+            ]
+        },
+        {
+            "promoNumber": "10554",
+            "description": "P>10554>สมัครสมาชิกAll Member",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "31021126",
+                    "description": "สิทธิ์ส่วนลด150 บ",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1,
+                    "endingBalance": "1"
+                }
+            ]
+        },
+        {
+            "promoNumber": "11643",
+            "description": "P>โฆษณาท้ายใบเสร็จ",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "9100092",
+                    "description": "** reward master not ready **",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1,
+                    "endingBalance": "1"
+                }
+            ]
+        },
+        {
+            "promoNumber": "11662",
+            "description": "P>สิทธิ์จองพรี่เมี่ยม",
+            "qualifySpend": 5500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 0,
+            "discountRewards": 0,
+            "rewardAmount": 0,
+            "originalRewardField": 0,
+            "rewardType": 19,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951,
+                                        "rewardAmount": 0
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 1799
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 951
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "9104140",
+                    "description": "** reward master not ready **",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 1,
+                    "endingBalance": "1"
+                }
+            ]
+        }
+    ],
+    "privilegePromoInfo": [
+        {
+            "promoNumber": "9399",
+            "description": "P>9399>ขาใช้สิทธิ์ส่วนลด 30 บ.จากการสมัครAMB",
+            "qualifySpend": 8500,
+            "quantity": 1,
+            "numberOfTotalSavers": 1,
+            "decimalRewardAmount": 30,
+            "discountRewards": 30,
+            "rewardAmount": 3000,
+            "originalRewardField": 3000,
+            "rewardType": 14,
+            "itemSpendPromotion": 0,
+            "containOrderValueBucket": false,
+            "triggeredByCoupon": false,
+            "confirmationRequired": false,
+            "redemptionSummary": [
+                {
+                    "redemptionLevel": {
+                        "count": "1",
+                        "levelNumber": "0",
+                        "redemption": [
+                            {
+                                "redemptionNumber": 0,
+                                "rewardsItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 2781,
+                                        "rewardAmount": 982
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 2781,
+                                        "rewardAmount": 982
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1469,
+                                        "rewardAmount": 518
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1469,
+                                        "rewardAmount": 518
+                                    }
+                                ],
+                                "triggerItems": [
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 2781
+                                    },
+                                    {
+                                        "pluCode": "2105251",
+                                        "depCode": "1",
+                                        "itemSeq": "1.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 3600,
+                                        "amount": 2781
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.1",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1469
+                                    },
+                                    {
+                                        "pluCode": "4200026",
+                                        "depCode": "1",
+                                        "itemSeq": "2.2",
+                                        "quantityType": 1,
+                                        "quantity": 1,
+                                        "price": 1900,
+                                        "amount": 1469
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "accounts": [
+                {
+                    "id": "31020631",
+                    "description": "สิทธิ์ส่วนลด 30 บาท",
+                    "numberOfDecimalPlaces": 0,
+                    "accountType": 0,
+                    "accumulatedBalanceType": 0,
+                    "manualUpdateAllowed": true,
+                    "earnValue": 0,
+                    "rdmValue": "1",
+                    "endingBalance": "-1"
+                }
+            ]
+        }
+    ],
+    "member": {
+        "name": "clo_test3",
+        "lastname": "gosoft",
+        "memberid": "010190655388",
+        "membercode": "0341234563",
+        "locked": false,
+        "offlinemode": false,
+        "rewards": [
+            {
+                "id": "31020569",
+                "description": "ภารกิจนักช้อปมือทอง",
+                "expiredate": "2029-12-31 23:59:59",
+                "total": 21,
+                "earnValue": 1,
+                "redeemValue": 0,
+                "endingBalance": 22,
+                "qualifySpend": 0,
+                "isShownReceiptTail": true,
+                "isRewardPloSystem": true
+            },
+            {
+                "id": "31020631",
+                "description": "สิทธิ์ส่วนลด 30 บาท",
+                "expiredate": "2025-12-23 23:59:59",
+                "total": 11,
+                "earnValue": 1,
+                "redeemValue": 1,
+                "endingBalance": 11,
+                "qualifySpend": 0,
+                "isShownReceiptTail": false,
+                "isRewardPloSystem": true
+            },
+            {
+                "id": "31020660",
+                "description": "ภารกิจเปิดรับใบเสร็จ",
+                "expiredate": "2029-12-31 23:59:59",
+                "total": 12,
+                "earnValue": 1,
+                "redeemValue": 0,
+                "endingBalance": 13,
+                "qualifySpend": 0,
+                "isShownReceiptTail": true,
+                "isRewardPloSystem": true
+            },
+            {
+                "id": "31021126",
+                "description": "สิทธิ์ส่วนลด150 บ",
+                "expiredate": "2029-12-31 23:59:59",
+                "total": 21,
+                "earnValue": 1,
+                "redeemValue": 0,
+                "endingBalance": 22,
+                "qualifySpend": 0,
+                "isShownReceiptTail": true,
+                "isRewardPloSystem": true
+            },
+            {
+                "id": "808",
+                "description": "All Member Point",
+                "expiredate": "2027-12-31 23:59:59",
+                "total": 28184,
+                "earnValue": 1015,
+                "redeemValue": 0,
+                "endingBalance": 29199,
+                "qualifySpend": 3800,
+                "isShownReceiptTail": true,
+                "isRewardPloSystem": true
+            },
+            {
+                "id": "9102965",
+                "description": "Register E Tax",
+                "expiredate": "2026-12-31 23:59:59",
+                "total": 1,
+                "earnValue": 0,
+                "redeemValue": 1,
+                "endingBalance": 0,
+                "qualifySpend": 0,
+                "isShownReceiptTail": true,
+                "isRewardPloSystem": true
+            },
+            {
+                "id": "31021232",
+                "description": "M-Stamp 2023 (TEST Other reward)",
+                "expiredate": "2025-12-31 23:59:59",
+                "total": 30,
+                "earnValue": 30,
+                "redeemValue": 0,
+                "endingBalance": 60,
+                "qualifySpend": 38,
+                "isShownReceiptTail": true,
+                "isRewardPloSystem": true
+            }
+        ]
+    },
+    "qualifySpend": 38,
+    "qualifySpendList": [
+        {
+            "code": "amb",
+            "qualifySpend": 38
+        },
+        {
+            "code": "mstamp",
+            "qualifySpend": 38
+        },
+        {
+            "code": "stamp",
+            "qualifySpend": 38
+        }
+    ],
+    "redeems": [],
+    "eligibleAccumulate": [
+        {
+            "accountId": "9100877",
+            "proNumber": "2850",
+            "description": "P>เหรียญเซเว่น 10 แลกส่วนลดเงินสด 10 บ.",
+            "eligibleQty": 5,
+            "productCode": "2105251"
+        }
+    ],
+    "stamp": [],
+    "coupons": [],
+    "incentivemsg": [],
+    "requestId": "59c9d95f-08e8-4b96-832d-fba00119d403",
+    "debug": {
+        "ruleProxyInput": {
+            "saleChannelId": 2,
+            "ticketNumber": "18885_3_1_20250620_26470",
+            "saleDatetime": "2025-06-20T12:00:00+07:00",
+            "branchCode": "18885",
+            "memberInfo": {
+                "code": "010190655388",
+                "level": 3,
+                "rewardBalanceList": [
+                    {
+                        "code": "31020569",
+                        "value": 21
+                    },
+                    {
+                        "code": "31020631",
+                        "value": 11
+                    },
+                    {
+                        "code": "31020660",
+                        "value": 12
+                    },
+                    {
+                        "code": "31021126",
+                        "value": 21
+                    },
+                    {
+                        "code": "808",
+                        "value": 28184
+                    },
+                    {
+                        "code": "31021299",
+                        "value": 25
+                    },
+                    {
+                        "code": "9103132",
+                        "value": 13
+                    },
+                    {
+                        "code": "9103901",
+                        "value": 85
+                    },
+                    {
+                        "code": "31020028",
+                        "value": 9
+                    },
+                    {
+                        "code": "9103475",
+                        "value": 11
+                    },
+                    {
+                        "code": "9103968",
+                        "value": 9
+                    },
+                    {
+                        "code": "31020512",
+                        "value": 1
+                    },
+                    {
+                        "code": "31021088",
+                        "value": 0
+                    },
+                    {
+                        "code": "9100877",
+                        "value": 11
+                    },
+                    {
+                        "code": "9102965",
+                        "value": 1
+                    },
+                    {
+                        "code": "31020013",
+                        "value": 1
+                    },
+                    {
+                        "code": "31021127",
+                        "value": 2
+                    },
+                    {
+                        "code": "31020018",
+                        "value": 1
+                    },
+                    {
+                        "code": "30020206",
+                        "value": 1
+                    },
+                    {
+                        "code": "31020568",
+                        "value": 1
+                    },
+                    {
+                        "code": "31021232",
+                        "value": 30
+                    },
+                    {
+                        "code": "9103242",
+                        "value": 1
+                    },
+                    {
+                        "code": "9103243",
+                        "value": 2
+                    },
+                    {
+                        "code": "31020027",
+                        "value": 1
+                    },
+                    {
+                        "code": "31020609",
+                        "value": 2
+                    },
+                    {
+                        "code": "202501141",
+                        "value": 0
+                    },
+                    {
+                        "code": "30020041",
+                        "value": 0
+                    },
+                    {
+                        "code": "30020103",
+                        "value": 0
+                    },
+                    {
+                        "code": "30020108",
+                        "value": 0
+                    },
+                    {
+                        "code": "30020300",
+                        "value": 0
+                    },
+                    {
+                        "code": "3101234",
+                        "value": 0
+                    },
+                    {
+                        "code": "31020227",
+                        "value": 0
+                    },
+                    {
+                        "code": "31020390",
+                        "value": 0
+                    },
+                    {
+                        "code": "31020514",
+                        "value": 0
+                    },
+                    {
+                        "code": "31020532",
+                        "value": 0
+                    },
+                    {
+                        "code": "31020610",
+                        "value": 0
+                    },
+                    {
+                        "code": "31020655",
+                        "value": 0
+                    },
+                    {
+                        "code": "31021020",
+                        "value": 0
+                    },
+                    {
+                        "code": "31021039",
+                        "value": 0
+                    },
+                    {
+                        "code": "31021362",
+                        "value": 0
+                    },
+                    {
+                        "code": "31022038",
+                        "value": 0
+                    },
+                    {
+                        "code": "71253345",
+                        "value": 0
+                    },
+                    {
+                        "code": "80000011",
+                        "value": 0
+                    },
+                    {
+                        "code": "81000004",
+                        "value": 0
+                    },
+                    {
+                        "code": "81000005",
+                        "value": 0
+                    },
+                    {
+                        "code": "81000008",
+                        "value": 0
+                    },
+                    {
+                        "code": "9100931",
+                        "value": 0
+                    },
+                    {
+                        "code": "9102078",
+                        "value": 0
+                    },
+                    {
+                        "code": "9102958",
+                        "value": 0
+                    },
+                    {
+                        "code": "9102959",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103473",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103599",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103602",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103828",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103860",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103861",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103862",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103863",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103888",
+                        "value": 0
+                    },
+                    {
+                        "code": "9103965",
+                        "value": 0
+                    },
+                    {
+                        "code": "9107701",
+                        "value": 0
+                    },
+                    {
+                        "code": "98050088",
+                        "value": 0
+                    },
+                    {
+                        "code": "99000976",
+                        "value": 0
+                    },
+                    {
+                        "code": "99000998",
+                        "value": 0
+                    },
+                    {
+                        "code": "9910001",
+                        "value": 0
+                    },
+                    {
+                        "code": "9989995",
+                        "value": 0
+                    }
+                ],
+                "segmentList": [
+                    {
+                        "code": "3"
+                    }
+                ]
+            },
+            "itemList": [
+                {
+                    "productCode": "2105251",
+                    "skuCode": "",
+                    "price": 3600,
+                    "quantity": 2,
+                    "info": {
+                        "depCode": "1",
+                        "subDepLv1": "21",
+                        "subDepLv2": "21_02",
+                        "subDepLv3": "21_02_01",
+                        "subDepLv4": "",
+                        "subDepLv5": "",
+                        "subDepLv6": "",
+                        "subDepLv7": "",
+                        "subDepLv8": "",
+                        "subDepLv9": "",
+                        "subDepLv10": ""
+                    }
+                },
+                {
+                    "productCode": "4200026",
+                    "skuCode": "",
+                    "price": 1900,
+                    "quantity": 2,
+                    "info": {
+                        "depCode": "1",
+                        "subDepLv1": "42",
+                        "subDepLv2": "42_03",
+                        "subDepLv3": "42_03_01",
+                        "subDepLv4": "",
+                        "subDepLv5": "",
+                        "subDepLv6": "",
+                        "subDepLv7": "",
+                        "subDepLv8": "",
+                        "subDepLv9": "",
+                        "subDepLv10": ""
+                    }
+                }
+            ],
+            "rewardInputList": [
+                {
+                    "code": "31920569",
+                    "value": 21
+                },
+                {
+                    "code": "31920631",
+                    "value": 11
+                },
+                {
+                    "code": "31920660",
+                    "value": 12
+                },
+                {
+                    "code": "31921126",
+                    "value": 21
+                },
+                {
+                    "code": "2808",
+                    "value": 28184
+                },
+                {
+                    "code": "31921299",
+                    "value": 25
+                },
+                {
+                    "code": "9193132",
+                    "value": 13
+                },
+                {
+                    "code": "9193901",
+                    "value": 85
+                },
+                {
+                    "code": "31920028",
+                    "value": 9
+                },
+                {
+                    "code": "9193475",
+                    "value": 11
+                },
+                {
+                    "code": "9193968",
+                    "value": 9
+                },
+                {
+                    "code": "31920512",
+                    "value": 1
+                },
+                {
+                    "code": "31921088",
+                    "value": 0
+                },
+                {
+                    "code": "9190877",
+                    "value": 11
+                },
+                {
+                    "code": "9192965",
+                    "value": 1
+                },
+                {
+                    "code": "31920013",
+                    "value": 1
+                },
+                {
+                    "code": "31921127",
+                    "value": 2
+                },
+                {
+                    "code": "31920018",
+                    "value": 1
+                },
+                {
+                    "code": "30920206",
+                    "value": 1
+                },
+                {
+                    "code": "31920568",
+                    "value": 1
+                },
+                {
+                    "code": "31921232",
+                    "value": 30
+                },
+                {
+                    "code": "9193242",
+                    "value": 1
+                },
+                {
+                    "code": "9193243",
+                    "value": 2
+                },
+                {
+                    "code": "31920027",
+                    "value": 1
+                },
+                {
+                    "code": "31920609",
+                    "value": 2
+                },
+                {
+                    "code": "30920041",
+                    "value": 0
+                },
+                {
+                    "code": "30920103",
+                    "value": 0
+                },
+                {
+                    "code": "30920108",
+                    "value": 0
+                },
+                {
+                    "code": "30920300",
+                    "value": 0
+                },
+                {
+                    "code": "3191234",
+                    "value": 0
+                },
+                {
+                    "code": "31920227",
+                    "value": 0
+                },
+                {
+                    "code": "31920390",
+                    "value": 0
+                },
+                {
+                    "code": "31920514",
+                    "value": 0
+                },
+                {
+                    "code": "31920532",
+                    "value": 0
+                },
+                {
+                    "code": "31920610",
+                    "value": 0
+                },
+                {
+                    "code": "31920655",
+                    "value": 0
+                },
+                {
+                    "code": "31921020",
+                    "value": 0
+                },
+                {
+                    "code": "31921039",
+                    "value": 0
+                },
+                {
+                    "code": "31921362",
+                    "value": 0
+                },
+                {
+                    "code": "31922038",
+                    "value": 0
+                },
+                {
+                    "code": "9190931",
+                    "value": 0
+                },
+                {
+                    "code": "9192078",
+                    "value": 0
+                },
+                {
+                    "code": "9192958",
+                    "value": 0
+                },
+                {
+                    "code": "9192959",
+                    "value": 0
+                },
+                {
+                    "code": "9193473",
+                    "value": 0
+                },
+                {
+                    "code": "9193599",
+                    "value": 0
+                },
+                {
+                    "code": "9193602",
+                    "value": 0
+                },
+                {
+                    "code": "9193828",
+                    "value": 0
+                },
+                {
+                    "code": "9193860",
+                    "value": 0
+                },
+                {
+                    "code": "9193861",
+                    "value": 0
+                },
+                {
+                    "code": "9193862",
+                    "value": 0
+                },
+                {
+                    "code": "9193863",
+                    "value": 0
+                },
+                {
+                    "code": "9193888",
+                    "value": 0
+                },
+                {
+                    "code": "9193965",
+                    "value": 0
+                },
+                {
+                    "code": "9197701",
+                    "value": 0
+                }
+            ],
+            "tenderList": [
+                {
+                    "code": "101",
+                    "value": 8500
+                }
+            ],
+            "localSegmentList": [
+                {
+                    "code": "106000003"
+                }
+            ],
+            "cfNeedToAskProList": []
+        },
+        "ruleProxyOutput": {
+            "availableNeedToAskProList": [
+                {
+                    "confirmableAmount": 5,
+                    "promotionCode": "2850",
+                    "promotionName": "P>เหรียญเซเว่น 10 แลกส่วนลดเงินสด 10 บ.",
+                    "triggerItemList": [
+                        {
+                            "code": "2105251"
+                        },
+                        {
+                            "code": "4200026"
+                        }
+                    ],
+                    "triggerRewardAccountList": [
+                        {
+                            "code": "9100877"
+                        }
+                    ]
+                }
+            ],
+            "discountTotal": 5500,
+            "finalValue": 5500,
+            "originalValue": 11000,
+            "plusSaleList": [],
+            "promotionVersion": "1.0.14",
+            "totalAffectedRewardAccountList": [
+                {
+                    "code": "31020631",
+                    "deductValue": 1,
+                    "earnValue": 1,
+                    "sumValue": 0
+                },
+                {
+                    "code": "808",
+                    "deductValue": 0,
+                    "earnValue": 1015,
+                    "sumValue": 1015
+                },
+                {
+                    "code": "9100487",
+                    "deductValue": 0,
+                    "earnValue": 2,
+                    "sumValue": 2
+                },
+                {
+                    "code": "31020569",
+                    "deductValue": 0,
+                    "earnValue": 1,
+                    "sumValue": 1
+                },
+                {
+                    "code": "31020660",
+                    "deductValue": 0,
+                    "earnValue": 1,
+                    "sumValue": 1
+                },
+                {
+                    "code": "9102965",
+                    "deductValue": 1,
+                    "earnValue": 0,
+                    "sumValue": -1
+                },
+                {
+                    "code": "31021126",
+                    "deductValue": 0,
+                    "earnValue": 1,
+                    "sumValue": 1
+                },
+                {
+                    "code": "9100092",
+                    "deductValue": 0,
+                    "earnValue": 1,
+                    "sumValue": 1
+                },
+                {
+                    "code": "9104140",
+                    "deductValue": 0,
+                    "earnValue": 1,
+                    "sumValue": 1
+                }
+            ],
+            "triggeredPromotionList": [
+                {
+                    "affectedRewardAccountList": [],
+                    "affectedSegmentList": [],
+                    "discountValue": 2500,
+                    "promotionCode": "7401",
+                    "promotionName": "P>7401>ส่วนลด โบโลน่าคู่แฟนต้าสไปรท์",
+                    "totalTriggerItemValue": 11000,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 3600,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "rewardValue": 819
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 3600,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "rewardValue": 819
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 1900,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "rewardValue": 431
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 1900,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "rewardValue": 431
+                                }
+                            ],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 3600,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 3600,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 1900,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 1900,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "31020631",
+                            "value": -1
+                        }
+                    ],
+                    "affectedSegmentList": [
+                        {
+                            "code": [
+                                "202000192"
+                            ],
+                            "connectMode": "CONNECT"
+                        }
+                    ],
+                    "discountValue": 3000,
+                    "promotionCode": "9399",
+                    "promotionName": "P>9399>ขาใช้สิทธิ์ส่วนลด 30 บ.จากการสมัครAMB",
+                    "totalTriggerItemValue": 8500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 2781,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "rewardValue": 982
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 2781,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "rewardValue": 982
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 1469,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "rewardValue": 518
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 1469,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "rewardValue": 518
+                                }
+                            ],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 2781,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 2781,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 1469,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 1469,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": [
+                                {
+                                    "code": "31020631"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "808",
+                            "value": 3
+                        },
+                        {
+                            "code": "808",
+                            "value": 3
+                        },
+                        {
+                            "code": "808",
+                            "value": 3
+                        },
+                        {
+                            "code": "808",
+                            "value": 3
+                        },
+                        {
+                            "code": "808",
+                            "value": 3
+                        }
+                    ],
+                    "affectedSegmentList": [],
+                    "discountValue": 0,
+                    "promotionCode": "4488",
+                    "promotionName": "P>4488 >Common Point 10บ.3แต้ม All Member",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 5,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "9100487",
+                            "value": 1
+                        }
+                    ],
+                    "affectedSegmentList": [],
+                    "discountValue": 0,
+                    "promotionCode": "8965",
+                    "promotionName": "P>8965>สิทธิ์แลกซื้อ",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "9100487",
+                            "value": 1
+                        }
+                    ],
+                    "affectedSegmentList": [],
+                    "discountValue": 0,
+                    "promotionCode": "8966",
+                    "promotionName": "P>8966>AMBสิทธิ์แลกซื้อรับเพิ่ม1สิทธิ์",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "31020569",
+                            "value": 1
+                        }
+                    ],
+                    "affectedSegmentList": [],
+                    "discountValue": 0,
+                    "promotionCode": "9035",
+                    "promotionName": "P>9035<ภารกิจนักช้อปมือทอง (7Delivery)",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "31020631",
+                            "value": 1
+                        }
+                    ],
+                    "affectedSegmentList": [
+                        {
+                            "code": [
+                                "202000190"
+                            ],
+                            "connectMode": "CONNECT"
+                        }
+                    ],
+                    "discountValue": 0,
+                    "promotionCode": "9400",
+                    "promotionName": "P>9400>สมัครสมาชิกAll Member",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "31020660",
+                            "value": 1
+                        },
+                        {
+                            "code": "9102965",
+                            "value": -1
+                        }
+                    ],
+                    "affectedSegmentList": [
+                        {
+                            "code": [
+                                "202000032"
+                            ],
+                            "connectMode": "CONNECT"
+                        }
+                    ],
+                    "discountValue": 0,
+                    "promotionCode": "9537",
+                    "promotionName": "P>9537>ภารกิจเปิดรับใบเสร็จ",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": [
+                                {
+                                    "code": "9102965"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "808",
+                            "value": 1000
+                        }
+                    ],
+                    "affectedSegmentList": [
+                        {
+                            "code": [
+                                "202000190"
+                            ],
+                            "connectMode": "CONNECT"
+                        }
+                    ],
+                    "discountValue": 0,
+                    "promotionCode": "10442",
+                    "promotionName": "P>10442>สมัครสมาชิกAll Memberแจก1000คะแนน",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "31021126",
+                            "value": 1
+                        }
+                    ],
+                    "affectedSegmentList": [
+                        {
+                            "code": [
+                                "202000190"
+                            ],
+                            "connectMode": "CONNECT"
+                        }
+                    ],
+                    "discountValue": 0,
+                    "promotionCode": "10554",
+                    "promotionName": "P>10554>สมัครสมาชิกAll Member",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "9100092",
+                            "value": 1
+                        }
+                    ],
+                    "affectedSegmentList": [],
+                    "discountValue": 0,
+                    "promotionCode": "11643",
+                    "promotionName": "P>โฆษณาท้ายใบเสร็จ",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                },
+                {
+                    "affectedRewardAccountList": [
+                        {
+                            "code": "9104140",
+                            "value": 1
+                        }
+                    ],
+                    "affectedSegmentList": [],
+                    "discountValue": 0,
+                    "promotionCode": "11662",
+                    "promotionName": "P>สิทธิ์จองพรี่เมี่ยม",
+                    "totalTriggerItemValue": 5500,
+                    "triggeredAmount": 1,
+                    "triggeringSummaryList": [
+                        {
+                            "rewardItemList": [],
+                            "triggerItemList": [
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.1",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "2105251",
+                                    "currentValue": 1799,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "21",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "21_02",
+                                        "subDepLv3": "21_02_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "1.2",
+                                    "originValue": 3600,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.1",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                },
+                                {
+                                    "code": "4200026",
+                                    "currentValue": 951,
+                                    "itemInfo": {
+                                        "depCode": "1",
+                                        "subDepLv1": "42",
+                                        "subDepLv10": "",
+                                        "subDepLv2": "42_03",
+                                        "subDepLv3": "42_03_01",
+                                        "subDepLv4": "",
+                                        "subDepLv5": "",
+                                        "subDepLv6": "",
+                                        "subDepLv7": "",
+                                        "subDepLv8": "",
+                                        "subDepLv9": ""
+                                    },
+                                    "itemSeq": "2.2",
+                                    "originValue": 1900,
+                                    "quantity": 1,
+                                    "quantityType": "REGULAR"
+                                }
+                            ],
+                            "triggerRewardList": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
