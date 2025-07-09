@@ -16,18 +16,15 @@ def filter_out_debug(obj):
 
 def build_partial_json(base, diff_paths):
     partial = {}
-
     for path in diff_paths:
         keys = re.findall(r"\['([^]]+)'\]|\[(\d+)\]", path)
         keys = [k[0] if k[0] else int(k[1]) for k in keys]
-
         current_src = base
         current_partial = partial
         parents = []
 
         for i, key in enumerate(keys):
             is_last = (i == len(keys) - 1)
-
             if isinstance(current_src, dict) and key not in current_src:
                 break
             if isinstance(current_src, list) and (not isinstance(key, int) or key >= len(current_src)):
@@ -45,30 +42,25 @@ def build_partial_json(base, diff_paths):
                         current_partial = new_list
                     else:
                         break
-
                 while len(current_partial) <= key:
                     current_partial.append({})
-
                 if is_last:
                     current_partial[key] = current_src[key]
                 else:
                     parents.append((current_partial, key))
                     current_partial = current_partial[key]
                     current_src = current_src[key]
-
             else:
                 if not isinstance(current_partial, dict):
                     break
                 if key not in current_partial:
                     current_partial[key] = {}
-
                 if is_last:
                     current_partial[key] = current_src[key]
                 else:
                     parents.append((current_partial, key))
                     current_partial = current_partial[key]
                     current_src = current_src[key]
-
     return partial
 
 def copy_text(text_widget):
@@ -90,13 +82,7 @@ def compare_json():
     base_filtered = filter_out_debug(base_data)
     compare_filtered = filter_out_debug(compare_data)
 
-    diff = DeepDiff(
-        base_filtered,
-        compare_filtered,
-        ignore_order=False,
-        report_repetition=True,
-        view="tree"
-    )
+    diff = DeepDiff(base_filtered, compare_filtered, ignore_order=False, report_repetition=True, view="tree")
 
     if not diff:
         label_result.config(text="✅ ไม่มีความแตกต่างระหว่าง JSON ทั้งสองไฟล์")
@@ -104,7 +90,6 @@ def compare_json():
         text_partial_compare.delete("1.0", END)
         return
 
-    # สร้าง path list จาก path tree object
     path_list = []
     for section in diff:
         for change in diff[section]:
@@ -115,13 +100,11 @@ def compare_json():
                     s += f"[{p}]" if isinstance(p, int) else f"['{p}']"
                 path_list.append(s)
 
-    # สร้าง JSON ที่แสดงเฉพาะส่วนที่ต่างกัน
     partial_base = build_partial_json(base_filtered, path_list)
     partial_compare = build_partial_json(compare_filtered, path_list)
 
     text_partial_base.delete("1.0", END)
     text_partial_compare.delete("1.0", END)
-
     text_partial_base.insert(END, json.dumps(partial_base, indent=2, ensure_ascii=False))
     text_partial_compare.insert(END, json.dumps(partial_compare, indent=2, ensure_ascii=False))
 
@@ -140,7 +123,7 @@ def paste_text(event=None):
 def show_context_menu(event):
     context_menu.tk_popup(event.x_root, event.y_root)
 
-# ==== GUI Layout ====
+# GUI Setup
 root = Tk()
 root.title("🧠 JSON Compare - แสดงความแตกต่างแบบ jsoncompare.org")
 root.geometry("1200x900")
@@ -161,34 +144,32 @@ label_result.pack()
 frame_diff = Frame(root)
 frame_diff.pack(padx=10, pady=10, fill="both", expand=True)
 
-Label(frame_diff, text="📂 JSON Base - ส่วนที่ต่าง", font=("Arial", 12, "bold")).grid(row=0, column=0, sticky="w")
-text_partial_base = ScrolledText(frame_diff, height=20, width=70)
-text_partial_base.grid(row=1, column=0, padx=10, pady=(0,10), sticky="nsew")
-
-Label(frame_diff, text="📂 JSON Compare - ส่วนที่ต่าง", font=("Arial", 12, "bold")).grid(row=0, column=1, sticky="w")
+# 🔁 สลับฝั่ง
+Label(frame_diff, text="📂 JSON Compare - ส่วนที่ต่าง", font=("Arial", 12, "bold")).grid(row=0, column=0, sticky="w")
 text_partial_compare = ScrolledText(frame_diff, height=20, width=70)
-text_partial_compare.grid(row=1, column=1, padx=10, pady=(0,10), sticky="nsew")
+text_partial_compare.grid(row=1, column=0, padx=10, pady=(0,10), sticky="nsew")
 
-# กำหนด weight ให้ขยายได้ในแนวตั้งและแนวนอน
+Label(frame_diff, text="📂 JSON Base - ส่วนที่ต่าง", font=("Arial", 12, "bold")).grid(row=0, column=1, sticky="w")
+text_partial_base = ScrolledText(frame_diff, height=20, width=70)
+text_partial_base.grid(row=1, column=1, padx=10, pady=(0,10), sticky="nsew")
+
 frame_diff.grid_columnconfigure(0, weight=1)
 frame_diff.grid_columnconfigure(1, weight=1)
 frame_diff.grid_rowconfigure(1, weight=1)
 
-# สร้าง Frame สำหรับปุ่ม copy ทั้งสองอันให้อยู่แถวเดียวกัน
+# Copy buttons
 button_frame = Frame(frame_diff)
-button_frame.grid(row=2, column=0, columnspan=2, pady=5, sticky="w")
-
-btn_copy_base = Button(button_frame, text="📋 Copy Base Diff", command=lambda: copy_text(text_partial_base))
-btn_copy_base.grid(row=0, column=0, padx=20, pady=5)
+button_frame.grid(row=2, column=0, columnspan=2, pady=5)
 
 btn_copy_compare = Button(button_frame, text="📋 Copy Compare Diff", command=lambda: copy_text(text_partial_compare))
-btn_copy_compare.grid(row=0, column=1, padx=20, pady=5)
+btn_copy_compare.grid(row=0, column=0, padx=20, pady=5)
 
-# สร้างเมนูคลิกขวา
+btn_copy_base = Button(button_frame, text="📋 Copy Base Diff", command=lambda: copy_text(text_partial_base))
+btn_copy_base.grid(row=0, column=1, padx=20, pady=5)
+
+# Paste context menu
 context_menu = tk.Menu(root, tearoff=0)
 context_menu.add_command(label="วาง (Paste)", command=lambda: root.focus_get().event_generate('<<Paste>>'))
-
-# ผูกเมนูคลิกขวาและ Ctrl+V ให้กับ text widget ทั้งสอง
 text_base.bind("<Button-3>", show_context_menu)
 text_compare.bind("<Button-3>", show_context_menu)
 root.bind_all("<Control-v>", paste_text)
