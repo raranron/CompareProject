@@ -1,11 +1,11 @@
 import json
 import tkinter as tk
 from tkinter import ttk, messagebox
-from tkinter.scrolledtext import ScrolledText
-from deepdiff import DeepDiff
 import pyperclip
 import re
+from deepdiff import DeepDiff
 
+# ----------------- JSON Utility -----------------
 def remove_description(obj):
     if isinstance(obj, dict):
         obj.pop("description", None)
@@ -72,16 +72,10 @@ def build_partial_json(base, diff_paths):
 
 def reorder_and_format_promos(base_data, compare_data):
     def extract_promos(data):
-        promo_dict = {}
-        for promo in data.get("promoInfo", []):
-            if "promoNumber" in promo:
-                promo_dict[promo["promoNumber"]] = promo
-        return promo_dict
+        return {promo["promoNumber"]: promo for promo in data.get("promoInfo", []) if "promoNumber" in promo}
 
     base_promos = extract_promos(base_data)
     compare_promos = extract_promos(compare_data)
-
-    # จัดเรียง promoNumber โดยเอาที่มีทั้งสองฝั่งไว้ก่อน
     all_keys = sorted(set(base_promos) | set(compare_promos),
                       key=lambda x: (x not in base_promos or x not in compare_promos, str(x)))
 
@@ -89,41 +83,51 @@ def reorder_and_format_promos(base_data, compare_data):
         out = []
         for key in keys:
             if key in promos:
-                promo = promos[key]
                 out.append(f"========== promoNumber: {key} ==========")
-                out.append(json.dumps(promo, indent=2, ensure_ascii=False))
+                out.append(json.dumps(promos[key], indent=2, ensure_ascii=False))
                 out.append("")
         return out
 
     def format_other_fields(data):
-        result = []
-        for k, v in data.items():
-            if k == "promoInfo":
-                continue
-            # แสดง key อื่นๆ ตามรูปแบบ "key": <json>
-            result.append(f"\"{k}\": {json.dumps(v, indent=2, ensure_ascii=False)}")
-            result.append("")
-        return result
+        return [f"\"{k}\": {json.dumps(v, indent=2, ensure_ascii=False)}\n" for k, v in data.items() if k != "promoInfo"]
 
     base_output = format_promos(base_promos, all_keys) + format_other_fields(base_data)
     compare_output = format_promos(compare_promos, all_keys) + format_other_fields(compare_data)
 
     return ("\n".join(base_output).strip(), "\n".join(compare_output).strip())
 
+# ----------------- GUI Utility -----------------
 def copy_text(widget):
     content = widget.get("1.0", tk.END).strip()
     if content:
-        pyperclip.copy(content)
-        messagebox.showinfo("คัดลอกแล้ว", "ข้อความถูกคัดลอกไปยังคลิปบอร์ดเรียบร้อยแล้ว")
+        try:
+            root.clipboard_clear()
+            root.clipboard_append(content)
+            messagebox.showinfo("คัดลอกแล้ว", "ข้อความถูกคัดลอกไปยังคลิปบอร์ดเรียบร้อยแล้ว")
+        except Exception as e:
+            messagebox.showerror("ผิดพลาด", f"ไม่สามารถคัดลอกข้อความได้:\n{e}")
     else:
         messagebox.showwarning("ว่างเปล่า", "ไม่มีข้อความให้คัดลอก")
 
 def add_right_click_menu(widget):
-    menu = tk.Menu(widget, tearoff=0)
+    menu = tk.Menu(widget, tearoff=0, bg="#2e2e2e", fg="#f8f8f2")
     menu.add_command(label="วาง (Paste)", command=lambda: widget.event_generate("<<Paste>>"))
     def popup(event):
         menu.tk_popup(event.x_root, event.y_root)
     widget.bind("<Button-3>", popup)
+
+def bind_scroll(widget):
+    widget.bind("<Enter>", lambda e: widget.bind_all("<MouseWheel>", lambda ev: widget.yview_scroll(int(-1*(ev.delta/120)), "units")))
+    widget.bind("<Leave>", lambda e: widget.unbind_all("<MouseWheel>"))
+
+def bind_paste_shortcuts(widget):
+    def do_paste(event):
+        widget.event_generate("<<Paste>>")
+        return "break"
+    widget.bind("<Control-v>", do_paste)
+    widget.bind("<Control-V>", do_paste)
+    widget.bind("<Shift-Insert>", do_paste)
+    widget.bind("<Control-Insert>", do_paste)
 
 def compare_json():
     try:
@@ -139,13 +143,7 @@ def compare_json():
     base_filtered = filter_out_debug(base_data)
     compare_filtered = filter_out_debug(compare_data)
 
-    diff = DeepDiff(
-        base_filtered,
-        compare_filtered,
-        ignore_order=False,
-        report_repetition=True,
-        view="tree"
-    )
+    diff = DeepDiff(base_filtered, compare_filtered, ignore_order=False, report_repetition=True, view="tree")
 
     if not diff:
         label_result.config(text="✅ ไม่มีความแตกต่างระหว่าง JSON ทั้งสองไฟล์")
@@ -174,52 +172,113 @@ def compare_json():
     total_diff = sum(len(diff[section]) for section in diff)
     label_result.config(text=f"🔍 พบความแตกต่างทั้งหมด {total_diff} จุด (เทียบแบบ jsoncompare.org)")
 
-# ==== GUI ====
+# ----------------- GUI -----------------
 root = tk.Tk()
 root.title("🧠 JSON Compare Tool")
-root.geometry("1350x900")
-root.configure(bg="#f0f2f5")
 
+# Fullscreen toggle
+is_fullscreen = True
+root.attributes("-fullscreen", True)
+
+def toggle_fullscreen(event=None):
+    global is_fullscreen
+    is_fullscreen = not is_fullscreen
+    root.attributes("-fullscreen", is_fullscreen)
+
+def exit_fullscreen(event=None):
+    global is_fullscreen
+    is_fullscreen = False
+    root.attributes("-fullscreen", False)
+
+root.bind("<F11>", toggle_fullscreen)
+root.bind("<Escape>", exit_fullscreen)
+
+# Theme
+DARK_BG = "#2e2e2e"
+DARK_TEXT = "#f8f8f2"
+TEXTBOX_BG = "#1e1e1e"
+HIGHLIGHT = "#3c3f41"
+
+root.configure(bg=DARK_BG)
+
+# Styles
 style = ttk.Style()
-style.theme_use('clam')
-style.configure("TButton", font=("Segoe UI", 10, "bold"))
-style.configure("TLabel", font=("Segoe UI", 11))
-style.configure("Header.TLabel", font=("Segoe UI", 12, "bold"))
+style.theme_use("clam")
+style.configure("TFrame", background=DARK_BG)
+style.configure("TLabel", background=DARK_BG, foreground=DARK_TEXT)
+style.configure("Header.TLabel", font=("Segoe UI", 13, "bold"), background=DARK_BG, foreground=DARK_TEXT)
+style.configure("TButton", background=HIGHLIGHT, foreground="#ffffff", relief="flat", padding=6)
+style.map("TButton", background=[("active", "#505354")], foreground=[("active", "#ffffff")])
+style.configure("TLabelframe", background=DARK_BG, foreground=DARK_TEXT)
+style.configure("TLabelframe.Label", background=DARK_BG, foreground=DARK_TEXT)
 
-ttk.Label(root, text="📘 JSON Base (Onlinepro.json)", style="Header.TLabel").pack(pady=(10, 0))
-text_base = ScrolledText(root, height=10, width=150, bg="#ffffff", relief="groove", bd=2)
-text_base.pack(padx=10, pady=5)
-add_right_click_menu(text_base)
+# Layout
+root.grid_rowconfigure(1, weight=1)
+root.grid_columnconfigure(0, weight=1)
 
-ttk.Label(root, text="📙 JSON Compare (NewPro.json)", style="Header.TLabel").pack(pady=(10, 0))
-text_compare = ScrolledText(root, height=10, width=150, bg="#ffffff", relief="groove", bd=2)
-text_compare.pack(padx=10, pady=5)
+ttk.Label(root, text="🧠 JSON Compare Tool", style="Header.TLabel").grid(row=0, column=0, pady=(10, 5))
+
+# Input
+frame_input = ttk.Frame(root)
+frame_input.grid(row=1, column=0, sticky="nsew", padx=10)
+frame_input.grid_columnconfigure(0, weight=1)
+frame_input.grid_columnconfigure(1, weight=1)
+frame_input.grid_rowconfigure(0, weight=1)
+
+frame_compare = ttk.Frame(frame_input)
+frame_compare.grid(row=0, column=0, padx=(0,5), sticky="nsew")
+ttk.Label(frame_compare, text="📙 JSON Compare (NewPro.json)", style="Header.TLabel").pack(anchor="w")
+text_compare = tk.Text(frame_compare, bg=TEXTBOX_BG, fg=DARK_TEXT, insertbackground="white", relief="groove")
+text_compare.pack(fill="both", expand=True)
 add_right_click_menu(text_compare)
+bind_scroll(text_compare)
+bind_paste_shortcuts(text_compare)
 
-ttk.Button(root, text="🔍 เปรียบเทียบ JSON", command=compare_json).pack(pady=15)
+frame_base = ttk.Frame(frame_input)
+frame_base.grid(row=0, column=1, padx=(5,0), sticky="nsew")
+ttk.Label(frame_base, text="📘 JSON Base (Onlinepro.json)", style="Header.TLabel").pack(anchor="w")
+text_base = tk.Text(frame_base, bg=TEXTBOX_BG, fg=DARK_TEXT, insertbackground="white", relief="groove")
+text_base.pack(fill="both", expand=True)
+add_right_click_menu(text_base)
+bind_scroll(text_base)
+bind_paste_shortcuts(text_base)
 
-label_result = ttk.Label(root, text="", foreground="green", font=("Segoe UI", 12, "bold"))
-label_result.pack()
+# Compare Button
+ttk.Button(root, text="🔍 เปรียบเทียบ JSON", command=compare_json).grid(row=2, column=0, pady=10)
 
-frame_diff = ttk.Frame(root)
-frame_diff.pack(padx=10, pady=10, fill="both", expand=True)
+# Result Label
+label_result = ttk.Label(root, text="", foreground="#66ff99", background=DARK_BG, font=("Segoe UI", 12, "bold"))
+label_result.grid(row=3, column=0, pady=5)
 
-ttk.Label(frame_diff, text="📂 JSON Compare - ส่วนที่ต่าง", style="Header.TLabel").grid(row=0, column=0, sticky="w", padx=10)
-text_partial_compare = ScrolledText(frame_diff, height=20, width=75, bg="#fefefe", relief="ridge", bd=2)
-text_partial_compare.grid(row=1, column=0, padx=10, pady=(0, 10), sticky="nsew")
+# Copy Buttons
+frame_copy = ttk.Frame(root)
+frame_copy.grid(row=4, column=0)
+ttk.Button(frame_copy, text="📋 Copy Compare Diff", command=lambda: copy_text(text_partial_compare)).pack(side="left", padx=15)
+ttk.Button(frame_copy, text="📋 Copy Base Diff", command=lambda: copy_text(text_partial_base)).pack(side="left", padx=15)
 
-ttk.Label(frame_diff, text="📂 JSON Base - ส่วนที่ต่าง", style="Header.TLabel").grid(row=0, column=1, sticky="w", padx=10)
-text_partial_base = ScrolledText(frame_diff, height=20, width=75, bg="#fefefe", relief="ridge", bd=2)
-text_partial_base.grid(row=1, column=1, padx=10, pady=(0, 10), sticky="nsew")
+# Output
+frame_output = ttk.Frame(root)
+frame_output.grid(row=5, column=0, sticky="nsew", padx=10, pady=(0,10))
+frame_output.grid_columnconfigure(0, weight=1)
+frame_output.grid_columnconfigure(1, weight=1)
+frame_output.grid_rowconfigure(0, weight=1)
 
-frame_diff.grid_columnconfigure(0, weight=1)
-frame_diff.grid_columnconfigure(1, weight=1)
-frame_diff.grid_rowconfigure(1, weight=1)
+frame_diff_compare = ttk.Frame(frame_output)
+frame_diff_compare.grid(row=0, column=0, sticky="nsew", padx=(0, 5))
+ttk.Label(frame_diff_compare, text="📙 JSON Compare - Differences", style="Header.TLabel").pack(anchor="w")
+text_partial_compare = tk.Text(frame_diff_compare, bg=TEXTBOX_BG, fg=DARK_TEXT, insertbackground="white", relief="ridge")
+text_partial_compare.pack(fill="both", expand=True)
+add_right_click_menu(text_partial_compare)
+bind_scroll(text_partial_compare)
+bind_paste_shortcuts(text_partial_compare)
 
-button_frame = ttk.Frame(root)
-button_frame.pack(pady=10)
-
-ttk.Button(button_frame, text="📋 Copy Compare Diff", command=lambda: copy_text(text_partial_compare)).grid(row=0, column=0, padx=20)
-ttk.Button(button_frame, text="📋 Copy Base Diff", command=lambda: copy_text(text_partial_base)).grid(row=0, column=1, padx=20)
+frame_diff_base = ttk.Frame(frame_output)
+frame_diff_base.grid(row=0, column=1, sticky="nsew", padx=(5, 0))
+ttk.Label(frame_diff_base, text="📘 JSON Base - Differences", style="Header.TLabel").pack(anchor="w")
+text_partial_base = tk.Text(frame_diff_base, bg=TEXTBOX_BG, fg=DARK_TEXT, insertbackground="white", relief="ridge")
+text_partial_base.pack(fill="both", expand=True)
+add_right_click_menu(text_partial_base)
+bind_scroll(text_partial_base)
+bind_paste_shortcuts(text_partial_base)
 
 root.mainloop()
