@@ -129,6 +129,17 @@ def bind_paste_shortcuts(widget):
     widget.bind("<Shift-Insert>", do_paste)
     widget.bind("<Control-Insert>", do_paste)
 
+def highlight_promo_lines(text_widget):
+    text_widget.tag_configure("highlight", foreground="#00ff00", font=("Segoe UI", 10, "bold"))
+    start = "1.0"
+    while True:
+        start = text_widget.search(r"^=+ promoNumber: .* =+$", start, stopindex=tk.END, regexp=True)
+        if not start:
+            break
+        end = f"{start} lineend"
+        text_widget.tag_add("highlight", start, end)
+        start = end
+
 def compare_json():
     try:
         base_data = json.loads(text_base.get("1.0", tk.END))
@@ -169,16 +180,19 @@ def compare_json():
     text_partial_base.insert(tk.END, base_result)
     text_partial_compare.insert(tk.END, compare_result)
 
+    # ไฮไลท์ promoNumber lines
+    highlight_promo_lines(text_partial_base)
+    highlight_promo_lines(text_partial_compare)
+
     total_diff = sum(len(diff[section]) for section in diff)
     label_result.config(text=f"🔍 พบความแตกต่างทั้งหมด {total_diff} จุด (เทียบแบบ jsoncompare.org)")
 
 # ----------------- GUI -----------------
 root = tk.Tk()
 root.title("🧠 JSON Compare Tool")
-
-# Fullscreen toggle
-is_fullscreen = True
 root.attributes("-fullscreen", True)
+
+is_fullscreen = True
 
 def toggle_fullscreen(event=None):
     global is_fullscreen
@@ -193,7 +207,6 @@ def exit_fullscreen(event=None):
 root.bind("<F11>", toggle_fullscreen)
 root.bind("<Escape>", exit_fullscreen)
 
-# Theme
 DARK_BG = "#2e2e2e"
 DARK_TEXT = "#f8f8f2"
 TEXTBOX_BG = "#1e1e1e"
@@ -201,7 +214,6 @@ HIGHLIGHT = "#3c3f41"
 
 root.configure(bg=DARK_BG)
 
-# Styles
 style = ttk.Style()
 style.theme_use("clam")
 style.configure("TFrame", background=DARK_BG)
@@ -212,13 +224,11 @@ style.map("TButton", background=[("active", "#505354")], foreground=[("active", 
 style.configure("TLabelframe", background=DARK_BG, foreground=DARK_TEXT)
 style.configure("TLabelframe.Label", background=DARK_BG, foreground=DARK_TEXT)
 
-# Layout
 root.grid_rowconfigure(1, weight=1)
 root.grid_columnconfigure(0, weight=1)
 
 ttk.Label(root, text="🧠 JSON Compare Tool", style="Header.TLabel").grid(row=0, column=0, pady=(10, 5))
 
-# Input
 frame_input = ttk.Frame(root)
 frame_input.grid(row=1, column=0, sticky="nsew", padx=10)
 frame_input.grid_columnconfigure(0, weight=1)
@@ -243,20 +253,16 @@ add_right_click_menu(text_base)
 bind_scroll(text_base)
 bind_paste_shortcuts(text_base)
 
-# Compare Button
 ttk.Button(root, text="🔍 เปรียบเทียบ JSON", command=compare_json).grid(row=2, column=0, pady=10)
 
-# Result Label
 label_result = ttk.Label(root, text="", foreground="#66ff99", background=DARK_BG, font=("Segoe UI", 12, "bold"))
 label_result.grid(row=3, column=0, pady=5)
 
-# Copy Buttons
 frame_copy = ttk.Frame(root)
 frame_copy.grid(row=4, column=0)
 ttk.Button(frame_copy, text="📋 Copy Compare Diff", command=lambda: copy_text(text_partial_compare)).pack(side="left", padx=15)
 ttk.Button(frame_copy, text="📋 Copy Base Diff", command=lambda: copy_text(text_partial_base)).pack(side="left", padx=15)
 
-# Output
 frame_output = ttk.Frame(root)
 frame_output.grid(row=5, column=0, sticky="nsew", padx=10, pady=(0,10))
 frame_output.grid_columnconfigure(0, weight=1)
