@@ -96,10 +96,48 @@ def format_full_output(data):
     output_lines = []
 
     if "promoInfo" in data and isinstance(data["promoInfo"], list):
-        for promo in data["promoInfo"]:
+        # 🔽 Sort by promoNumber
+        sorted_promos = sorted(
+            data["promoInfo"],
+            key=lambda p: int(p.get("promoNumber", "0")) if str(p.get("promoNumber", "0")).isdigit() else float('inf')
+        )
+        for promo in sorted_promos:
             promo_number = promo.get("promoNumber", "N/A")
             output_lines.append(f"========== promoNumber: {promo_number} ==========")
-            output_lines.append(json.dumps(promo, indent=2, ensure_ascii=False))
+            custom_output = {}
+
+            for field in [
+                "qualifySpend", "quantity", "numberOfTotalSavers",
+                "originalRewardField", "containOrderValueBucket"
+            ]:
+                if field in promo:
+                    custom_output[field] = promo[field]
+
+            if "redemptionSummary" in promo:
+                custom_output["redemptionSummary"] = []
+                for rs in promo["redemptionSummary"]:
+                    r_level = rs.get("redemptionLevel", {})
+                    r_data = {
+                        "redemptionLevel": {
+                            "redemption": []
+                        }
+                    }
+                    for red in r_level.get("redemption", []):
+                        red_entry = {}
+                        if "rewardsItems" in red:
+                            red_entry["rewardsItems"] = [
+                                {k: item[k] for k in ["amount", "rewardAmount"] if k in item}
+                                for item in red["rewardsItems"]
+                            ]
+                        if "triggerItems" in red:
+                            red_entry["triggerItems"] = [
+                                {k: item[k] for k in ["amount"] if k in item}
+                                for item in red["triggerItems"]
+                            ]
+                        r_data["redemptionLevel"]["redemption"].append(red_entry)
+                    custom_output["redemptionSummary"].append(r_data)
+
+            output_lines.append(json.dumps(custom_output, indent=2, ensure_ascii=False))
             output_lines.append("")
 
     for key, value in data.items():
@@ -109,6 +147,7 @@ def format_full_output(data):
         output_lines.append("")
 
     return "\n".join(output_lines).strip()
+
 
 # ----------------- GUI Utility -----------------
 def copy_text(widget):
@@ -159,7 +198,9 @@ def highlight_differences(text_widget, diff_paths):
     text_widget.tag_remove("diff_highlight", "1.0", tk.END)
 
     # ตั้งค่า tag
-    text_widget.tag_configure("diff_highlight", background="#ffcccc")  # สีชมพูอ่อนไฮไลท์
+    # text_widget.tag_configure("diff_highlight", background="#FFFFFF")  # สีไฮไลท์
+    text_widget.tag_configure("diff_highlight", foreground="#F700FF", font=("Segoe UI", 10, "bold"))  # สีตัวหนังสือไฮไลท์
+    text_widget.tag_configure("diff_highlight", font=("Segoe UI", 10, "bold"))  # ตัวหนา
 
     for path in diff_paths:
         # แปลง path deepdiff -> regex pattern สำหรับค้นหาใน Text widget
