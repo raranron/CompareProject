@@ -70,80 +70,45 @@ def build_partial_json(base, diff_paths):
                     current_src = current_src[key]
     return partial
 
-def extract_all_promos(obj):
-    promos = []
-    if isinstance(obj, dict):
-        if "promoNumber" in obj:
-            promos.append(obj)
-        for v in obj.values():
-            promos.extend(extract_all_promos(v))
-    elif isinstance(obj, list):
-        for item in obj:
-            promos.extend(extract_all_promos(item))
-    return promos
+def fill_missing_promo_numbers(partial, full):
+    """
+    เติม promoNumber ให้กับ promoInfo ที่ไม่มีใน partial จาก full (ต้นฉบับ)
+    """
+    if not ("promoInfo" in partial and isinstance(partial["promoInfo"], list)):
+        return
+    if not ("promoInfo" in full and isinstance(full["promoInfo"], list)):
+        return
 
-def sort_promos_by_number(promos):
-    def promo_key(p):
-        try:
-            return int(p.get("promoNumber", 0))
-        except:
-            return 0
-    return sorted(promos, key=promo_key)
+    full_promos = full["promoInfo"]
+    partial_promos = partial["promoInfo"]
 
-def format_full_output(data, original_data=None):
-    promos = extract_all_promos(data)
-    promos = sort_promos_by_number(promos)
+    for i, promo_partial in enumerate(partial_promos):
+        if "promoNumber" not in promo_partial:
+            if i < len(full_promos):
+                promo_partial["promoNumber"] = full_promos[i].get("promoNumber", "N/A")
+            else:
+                promo_partial["promoNumber"] = "N/A"
+
+def format_full_output(data):
+    if not isinstance(data, dict):
+        return json.dumps(data, indent=2, ensure_ascii=False)
+
     output_lines = []
-    if promos:
-        for promo in promos:
-            promo_num = promo.get("promoNumber", "N/A")
-            output_lines.append(f"========== promoNumber: {promo_num} ==========")
+
+    if "promoInfo" in data and isinstance(data["promoInfo"], list):
+        for promo in data["promoInfo"]:
+            promo_number = promo.get("promoNumber", "N/A")
+            output_lines.append(f"========== promoNumber: {promo_number} ==========")
             output_lines.append(json.dumps(promo, indent=2, ensure_ascii=False))
-    else:
-        promo_number = None
-        if data:
-            promo_number = find_promo_number(data)
-        if not promo_number and original_data:
-            promo_number = find_promo_number(original_data)
-        promo_number_str = promo_number if promo_number else "N/A"
-        output_lines.append(f"========== promoNumber: {promo_number_str} ==========")
-        output_lines.append(json.dumps(data, indent=2, ensure_ascii=False))
-    return "\n".join(output_lines)
+            output_lines.append("")
 
-def find_promo_number(obj):
-    if isinstance(obj, dict):
-        if "promoNumber" in obj:
-            return obj["promoNumber"]
-        for v in obj.values():
-            result = find_promo_number(v)
-            if result:
-                return result
-    elif isinstance(obj, list):
-        for item in obj:
-            result = find_promo_number(item)
-            if result:
-                return result
-    return None
+    for key, value in data.items():
+        if key == "promoInfo":
+            continue
+        output_lines.append(f'"{key}": {json.dumps(value, indent=2, ensure_ascii=False)}')
+        output_lines.append("")
 
-def remove_common(base, compare):
-    """ลบข้อมูลที่เหมือนกันใน base ออกจาก base"""
-    if isinstance(base, dict) and isinstance(compare, dict):
-        keys_to_delete = []
-        for k in base:
-            if k in compare:
-                if remove_common(base[k], compare[k]):
-                    keys_to_delete.append(k)
-        for k in keys_to_delete:
-            del base[k]
-        return len(base) == 0
-    elif isinstance(base, list) and isinstance(compare, list):
-        min_len = min(len(base), len(compare))
-        for i in reversed(range(min_len)):
-            if base[i] == compare[i]:
-                base.pop(i)
-        return len(base) == 0
-    else:
-        return base == compare
+    return "\n".join(output_lines).strip()
 
 # ----------------- GUI Utility -----------------
 def copy_text(widget):
@@ -179,52 +144,48 @@ def bind_paste_shortcuts(widget):
     widget.bind("<Control-Insert>", do_paste)
 
 def highlight_promo_lines(text_widget):
-    text_widget.tag_configure("promo_highlight", foreground="#00ff00", font=("Segoe UI", 10, "bold"))
+    text_widget.tag_configure("highlight", foreground="#00ff00", font=("Segoe UI", 10, "bold"))
     start = "1.0"
     while True:
         start = text_widget.search(r"^=+ promoNumber: .* =+$", start, stopindex=tk.END, regexp=True)
         if not start:
             break
         end = f"{start} lineend"
-        text_widget.tag_add("promo_highlight", start, end)
+        text_widget.tag_add("highlight", start, end)
         start = end
 
-def highlight_diff_details(text_widget, diff):
-    text_widget.tag_configure("diff_key", foreground="#ff5555", font=("Segoe UI", 10, "bold"))
-    text_widget.tag_configure("diff_value", foreground="#ff4444")
+def highlight_differences(text_widget, diff_paths):
+    # เคลียร์ tag ก่อน
+    text_widget.tag_remove("diff_highlight", "1.0", tk.END)
 
-    text_widget.tag_remove("diff_key", "1.0", tk.END)
-    text_widget.tag_remove("diff_value", "1.0", tk.END)
+    # ตั้งค่า tag
+    text_widget.tag_configure("diff_highlight", background="#ffcccc")  # สีชมพูอ่อนไฮไลท์
 
-    paths = []
-    for section in diff:
-        for change in diff[section]:
-            if hasattr(change, 'path'):
-                paths.append(change.path(output_format='list'))
+    for path in diff_paths:
+        # แปลง path deepdiff -> regex pattern สำหรับค้นหาใน Text widget
+        # ตัวอย่าง path: "['promoInfo'][0]['accounts'][1]['endingBalance']"
+        # เราจะหา key-value คู่ที่อยู่ใกล้ path นี้ใน text json
+        
+        # ดึง key สุดท้ายใน path เพื่อใช้ค้นหา
+        keys = re.findall(r"\['([^]]+)'\]|\[(\d+)\]", path)
+        last_key = None
+        if keys:
+            last_key = keys[-1][0] if keys[-1][0] else keys[-1][1]
 
-    text = text_widget.get("1.0", tk.END)
-
-    for path in paths:
-        if not path:
+        if not last_key:
             continue
-        key = path[-1]
-        key_str = str(key)
-
-        # ไฮไลท์ key เช่น "promoNumber":
-        pattern_key = re.compile(r'("'+re.escape(key_str)+r'"\s*:)')
-        for m in pattern_key.finditer(text):
-            start_index = f"1.0+{m.start(1)}c"
-            end_index = f"1.0+{m.end(1)}c"
-            text_widget.tag_add("diff_key", start_index, end_index)
-
-        # ไฮไลท์ค่า value ที่เป็น string/number/true/false/null
-        pattern_val_str = re.compile(r'"'+re.escape(key_str)+r'"\s*:\s*("[^"]*"|\d+|true|false|null)')
-        for m in pattern_val_str.finditer(text):
-            val_start = m.start(1)
-            val_end = m.end(1)
-            start_index = f"1.0+{val_start}c"
-            end_index = f"1.0+{val_end}c"
-            text_widget.tag_add("diff_value", start_index, end_index)
+        
+        # ค้นหาบรรทัดที่มี key หรือ key พร้อมค่าที่น่าสนใจ
+        start_index = "1.0"
+        while True:
+            pos = text_widget.search(f'"{last_key}"', start_index, stopindex=tk.END)
+            if not pos:
+                break
+            # ไฮไลท์ทั้งบรรทัด
+            line_start = f"{pos.split('.')[0]}.0"
+            line_end = f"{pos.split('.')[0]}.end"
+            text_widget.tag_add("diff_highlight", line_start, line_end)
+            start_index = line_end
 
 def compare_json():
     try:
@@ -259,12 +220,11 @@ def compare_json():
     partial_base = build_partial_json(base_filtered, path_list)
     partial_compare = build_partial_json(compare_filtered, path_list)
 
-    # ลบข้อมูลที่เหมือนกันออกจากกันและกัน
-    remove_common(partial_base, partial_compare)
-    remove_common(partial_compare, partial_base)
+    fill_missing_promo_numbers(partial_base, base_filtered)
+    fill_missing_promo_numbers(partial_compare, compare_filtered)
 
-    base_result = format_full_output(partial_base, base_filtered)
-    compare_result = format_full_output(partial_compare, compare_filtered)
+    base_result = format_full_output(partial_base)
+    compare_result = format_full_output(partial_compare)
 
     text_partial_base.delete("1.0", tk.END)
     text_partial_compare.delete("1.0", tk.END)
@@ -274,23 +234,24 @@ def compare_json():
     highlight_promo_lines(text_partial_base)
     highlight_promo_lines(text_partial_compare)
 
-    highlight_diff_details(text_partial_base, diff)
-    highlight_diff_details(text_partial_compare, diff)
+    # ไฮไลท์ความแตกต่างใน partial JSON
+    highlight_differences(text_partial_base, path_list)
+    highlight_differences(text_partial_compare, path_list)
 
     total_diff = sum(len(diff[section]) for section in diff)
-    label_result.config(text=f"🔍 พบความแตกต่างทั้งหมด {total_diff} จุด (เทียบแบบ jsoncompare.org)")
+    label_result.config(text=f"🔍 พบความแตกต่างทั้งหมด {total_diff} จุด")
+
 
 # ----------------- GUI -----------------
 root = tk.Tk()
 root.title("🧠 JSON Compare Tool")
 root.attributes("-fullscreen", True)
-is_fullscreen = True
 
+is_fullscreen = True
 def toggle_fullscreen(event=None):
     global is_fullscreen
     is_fullscreen = not is_fullscreen
     root.attributes("-fullscreen", is_fullscreen)
-
 def exit_fullscreen(event=None):
     global is_fullscreen
     is_fullscreen = False
@@ -327,7 +288,6 @@ frame_input.grid_columnconfigure(0, weight=1)
 frame_input.grid_columnconfigure(1, weight=1)
 frame_input.grid_rowconfigure(0, weight=1)
 
-# Compare JSON (Right)
 frame_compare = ttk.Frame(frame_input)
 frame_compare.grid(row=0, column=0, padx=(0,5), sticky="nsew")
 ttk.Label(frame_compare, text="📙 JSON Compare (NewPro.json)", style="Header.TLabel").pack(anchor="w")
@@ -337,7 +297,6 @@ add_right_click_menu(text_compare)
 bind_scroll(text_compare)
 bind_paste_shortcuts(text_compare)
 
-# Base JSON (Left)
 frame_base = ttk.Frame(frame_input)
 frame_base.grid(row=0, column=1, padx=(5,0), sticky="nsew")
 ttk.Label(frame_base, text="📘 JSON Base (Onlinepro.json)", style="Header.TLabel").pack(anchor="w")
@@ -347,27 +306,22 @@ add_right_click_menu(text_base)
 bind_scroll(text_base)
 bind_paste_shortcuts(text_base)
 
-# Compare Button
 ttk.Button(root, text="🔍 เปรียบเทียบ JSON", command=compare_json).grid(row=2, column=0, pady=10)
 
-# Result Label
 label_result = ttk.Label(root, text="", foreground="#66ff99", background=DARK_BG, font=("Segoe UI", 12, "bold"))
 label_result.grid(row=3, column=0, pady=5)
 
-# Copy Buttons
 frame_copy = ttk.Frame(root)
 frame_copy.grid(row=4, column=0)
 ttk.Button(frame_copy, text="📋 Copy Compare Diff", command=lambda: copy_text(text_partial_compare)).pack(side="left", padx=15)
 ttk.Button(frame_copy, text="📋 Copy Base Diff", command=lambda: copy_text(text_partial_base)).pack(side="left", padx=15)
 
-# Output Differences
 frame_output = ttk.Frame(root)
 frame_output.grid(row=5, column=0, sticky="nsew", padx=10, pady=(0,10))
 frame_output.grid_columnconfigure(0, weight=1)
 frame_output.grid_columnconfigure(1, weight=1)
 frame_output.grid_rowconfigure(0, weight=1)
 
-# Compare Diff Panel (Right)
 frame_diff_compare = ttk.Frame(frame_output)
 frame_diff_compare.grid(row=0, column=0, sticky="nsew", padx=(0, 5))
 ttk.Label(frame_diff_compare, text="📙 JSON Compare - Differences", style="Header.TLabel").pack(anchor="w")
@@ -377,7 +331,6 @@ add_right_click_menu(text_partial_compare)
 bind_scroll(text_partial_compare)
 bind_paste_shortcuts(text_partial_compare)
 
-# Base Diff Panel (Left)
 frame_diff_base = ttk.Frame(frame_output)
 frame_diff_base.grid(row=0, column=1, sticky="nsew", padx=(5, 0))
 ttk.Label(frame_diff_base, text="📘 JSON Base - Differences", style="Header.TLabel").pack(anchor="w")
