@@ -104,42 +104,12 @@ def format_full_output(data):
         for promo in sorted_promos:
             promo_number = promo.get("promoNumber", "N/A")
             output_lines.append(f"========== promoNumber: {promo_number} ==========")
-            custom_output = {}
+            # แสดงข้อมูลเต็มของแต่ละโปรโมชั่น
+            promo_str = json.dumps(promo, indent=2, ensure_ascii=False)
+            output_lines.append(promo_str)
+            output_lines.append("")  # เว้นบรรทัด
 
-            for field in [
-                "qualifySpend", "quantity", "numberOfTotalSavers",
-                "originalRewardField", "containOrderValueBucket"
-            ]:
-                if field in promo:
-                    custom_output[field] = promo[field]
-
-            if "redemptionSummary" in promo:
-                custom_output["redemptionSummary"] = []
-                for rs in promo["redemptionSummary"]:
-                    r_level = rs.get("redemptionLevel", {})
-                    r_data = {
-                        "redemptionLevel": {
-                            "redemption": []
-                        }
-                    }
-                    for red in r_level.get("redemption", []):
-                        red_entry = {}
-                        if "rewardsItems" in red:
-                            red_entry["rewardsItems"] = [
-                                {k: item[k] for k in ["amount", "rewardAmount"] if k in item}
-                                for item in red["rewardsItems"]
-                            ]
-                        if "triggerItems" in red:
-                            red_entry["triggerItems"] = [
-                                {k: item[k] for k in ["amount"] if k in item}
-                                for item in red["triggerItems"]
-                            ]
-                        r_data["redemptionLevel"]["redemption"].append(red_entry)
-                    custom_output["redemptionSummary"].append(r_data)
-
-            output_lines.append(json.dumps(custom_output, indent=2, ensure_ascii=False))
-            output_lines.append("")
-
+    # สำหรับ key อื่นที่ไม่ใช่ promoInfo
     for key, value in data.items():
         if key == "promoInfo":
             continue
@@ -147,7 +117,6 @@ def format_full_output(data):
         output_lines.append("")
 
     return "\n".join(output_lines).strip()
-
 
 # ----------------- GUI Utility -----------------
 def copy_text(widget):
