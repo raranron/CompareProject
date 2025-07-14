@@ -119,17 +119,24 @@ def format_full_output(data):
     return "\n".join(output_lines).strip()
 
 # ----------------- GUI Utility -----------------
+
+def clear_label_result():
+    label_result.config(text="")
+
 def copy_text(widget):
     content = widget.get("1.0", tk.END).strip()
     if content:
         try:
             root.clipboard_clear()
             root.clipboard_append(content)
-            messagebox.showinfo("คัดลอกแล้ว", "ข้อความถูกคัดลอกไปยังคลิปบอร์ดเรียบร้อยแล้ว")
+            label_result.config(text="✅ ข้อความถูกคัดลอกไปยังคลิปบอร์ดแล้ว", foreground="#66ff99")
+            label_result.after(1000, clear_label_result)
         except Exception as e:
-            messagebox.showerror("ผิดพลาด", f"ไม่สามารถคัดลอกข้อความได้:\n{e}")
+            label_result.config(text=f"❌ ไม่สามารถคัดลอกข้อความได้: {e}", foreground="#ff6666")
+            label_result.after(1000, clear_label_result)
     else:
-        messagebox.showwarning("ว่างเปล่า", "ไม่มีข้อความให้คัดลอก")
+        label_result.config(text="⚠️ ไม่มีข้อความให้คัดลอก", foreground="#ffaa00")
+        label_result.after(1000, clear_label_result)
 
 def add_right_click_menu(widget):
     menu = tk.Menu(widget, tearoff=0, bg="#2e2e2e", fg="#f8f8f2")
