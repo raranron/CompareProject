@@ -225,6 +225,7 @@ def compare_json():
     partial_compare_result = {"promoInfo": []}
     total_diff_paths = []
 
+    # ==== เปรียบเทียบ promoInfo ตาม promoNumber ====
     common_promo_numbers = sorted(set(base_promos.keys()) & set(compare_promos.keys()), key=lambda x: int(x))
 
     for promo_num in common_promo_numbers:
@@ -254,6 +255,36 @@ def compare_json():
         partial_compare["promoNumber"] = promo_num
         partial_compare_result["promoInfo"].append(partial_compare)
 
+    # ==== เปรียบเทียบฟิลด์อื่น ๆ ที่ไม่ใช่ promoInfo ====
+    other_keys = set(base_filtered.keys()) | set(compare_filtered.keys())
+    other_keys.discard("promoInfo")
+
+    for key in sorted(other_keys):
+        if key not in base_filtered or key not in compare_filtered:
+            continue  # skip if key missing in one side
+
+        diff = DeepDiff(base_filtered[key], compare_filtered[key], ignore_order=False, report_repetition=True, view="tree")
+
+        if not diff:
+            continue
+
+        path_list = []
+        for section in diff:
+            for change in diff[section]:
+                if hasattr(change, 'path'):
+                    path = change.path(output_format='list')
+                    s = f"['{key}']" + "".join(f"[{p}]" if isinstance(p, int) else f"['{p}']" for p in path)
+                    path_list.append(s)
+
+        total_diff_paths.extend(path_list)
+
+        partial_base = build_partial_json(base_filtered, path_list)
+        partial_compare = build_partial_json(compare_filtered, path_list)
+
+        partial_base_result.update(partial_base)
+        partial_compare_result.update(partial_compare)
+
+    # ==== สร้างผลลัพธ์และแสดงผล ====
     base_result = format_full_output(partial_base_result)
     compare_result = format_full_output(partial_compare_result)
 
@@ -268,7 +299,6 @@ def compare_json():
     highlight_differences(text_partial_compare, total_diff_paths)
 
     label_result.config(text=f"🔍 พบความแตกต่างทั้งหมด {len(total_diff_paths)} จุด")
-
 
 # ----------------- GUI -----------------
 root = tk.Tk()
