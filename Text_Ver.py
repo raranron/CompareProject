@@ -218,30 +218,44 @@ def compare_json():
     base_filtered = filter_out_debug(base_data)
     compare_filtered = filter_out_debug(compare_data)
 
-    diff = DeepDiff(base_filtered, compare_filtered, ignore_order=False, report_repetition=True, view="tree")
+    base_promos = {p["promoNumber"]: p for p in base_filtered.get("promoInfo", []) if "promoNumber" in p}
+    compare_promos = {p["promoNumber"]: p for p in compare_filtered.get("promoInfo", []) if "promoNumber" in p}
 
-    if not diff:
-        label_result.config(text="✅ ไม่มีความแตกต่างระหว่าง JSON ทั้งสองไฟล์")
-        text_partial_base.delete("1.0", tk.END)
-        text_partial_compare.delete("1.0", tk.END)
-        return
+    partial_base_result = {"promoInfo": []}
+    partial_compare_result = {"promoInfo": []}
+    total_diff_paths = []
 
-    path_list = []
-    for section in diff:
-        for change in diff[section]:
-            if hasattr(change, 'path'):
-                path = change.path(output_format='list')
-                s = "".join(f"[{p}]" if isinstance(p, int) else f"['{p}']" for p in path)
-                path_list.append(s)
+    common_promo_numbers = sorted(set(base_promos.keys()) & set(compare_promos.keys()), key=lambda x: int(x))
 
-    partial_base = build_partial_json(base_filtered, path_list)
-    partial_compare = build_partial_json(compare_filtered, path_list)
+    for promo_num in common_promo_numbers:
+        base_promo = base_promos[promo_num]
+        compare_promo = compare_promos[promo_num]
 
-    fill_missing_promo_numbers(partial_base, base_filtered)
-    fill_missing_promo_numbers(partial_compare, compare_filtered)
+        diff = DeepDiff(base_promo, compare_promo, ignore_order=False, report_repetition=True, view="tree")
 
-    base_result = format_full_output(partial_base)
-    compare_result = format_full_output(partial_compare)
+        if not diff:
+            continue
+
+        path_list = []
+        for section in diff:
+            for change in diff[section]:
+                if hasattr(change, 'path'):
+                    path = change.path(output_format='list')
+                    s = "".join(f"[{p}]" if isinstance(p, int) else f"['{p}']" for p in path)
+                    path_list.append(s)
+
+        total_diff_paths.extend([f"['promoInfo'][{len(partial_base_result['promoInfo'])}]{p}" for p in path_list])
+
+        partial_base = build_partial_json(base_promo, path_list)
+        partial_base["promoNumber"] = promo_num
+        partial_base_result["promoInfo"].append(partial_base)
+
+        partial_compare = build_partial_json(compare_promo, path_list)
+        partial_compare["promoNumber"] = promo_num
+        partial_compare_result["promoInfo"].append(partial_compare)
+
+    base_result = format_full_output(partial_base_result)
+    compare_result = format_full_output(partial_compare_result)
 
     text_partial_base.delete("1.0", tk.END)
     text_partial_compare.delete("1.0", tk.END)
@@ -250,13 +264,10 @@ def compare_json():
 
     highlight_promo_lines(text_partial_base)
     highlight_promo_lines(text_partial_compare)
+    highlight_differences(text_partial_base, total_diff_paths)
+    highlight_differences(text_partial_compare, total_diff_paths)
 
-    # ไฮไลท์ความแตกต่างใน partial JSON
-    highlight_differences(text_partial_base, path_list)
-    highlight_differences(text_partial_compare, path_list)
-
-    total_diff = sum(len(diff[section]) for section in diff)
-    label_result.config(text=f"🔍 พบความแตกต่างทั้งหมด {total_diff} จุด")
+    label_result.config(text=f"🔍 พบความแตกต่างทั้งหมด {len(total_diff_paths)} จุด")
 
 
 # ----------------- GUI -----------------
